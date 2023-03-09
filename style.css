@@ -1,0 +1,69 @@
+:root{
+    --white: #F1F6FB;
+    --red: #CD2224;
+    --d_red: #70090C;
+    --Gray: #5A5A5A;
+    --gold: rgb(224, 176, 76);
+
+}
+
+ul li{
+    font-family: 'Marck Script', cursive;
+}
+
+
+.bg-white{
+    background-color: var(--white);
+}
+.bg-Gray{
+    background-color: var(--Gray);
+}
+
+/* navbar */
+
+.navbar{
+    height: 70px;
+    transition: 0.5s;
+}
+.ul-custom{
+    border-bottom: 3px solid var(--gold);
+}
+.logo{
+    width: 50px;
+}
+
+.nav-link{
+    font-size: 20px;
+    text-align: center;
+    width: 100px
+   
+}
+.toggler-custom{
+    width: 50px;
+    transition: 0.8s;
+}
+
+.pallino{
+    position: relative;
+}
+
+.pallino::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    
+    top: 39px;
+    right: 143px;
+
+}
+
+@media screen and (max-width: 767px) {
+    .pallino::after{
+       display: none;
+    }
+    
+    
+}
