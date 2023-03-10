@@ -12,10 +12,12 @@ main{
 
 h1, h2, h3, .h1, .h2, .h3{
     color: var(--d_red);
+    font-family: 'Marck Script', cursive;
 }
 
-ul li, h1{
+ul li, h1, p{
     font-family: 'Marck Script', cursive;
+
 }
 
 .text-dred{
@@ -46,6 +48,18 @@ ul li, h1{
 }
 .ul-custom{
     border-bottom: 3px solid var(--gold);
+}
+.nav-custom{
+    width: 30vh;
+    position: absolute;
+}
+
+.ul-custom li{
+    transition: 0.3s;
+}
+.ul-custom li:hover{
+    scale: 1.1;
+
 }
 .logo{
     width: 50px;
@@ -98,6 +112,11 @@ ul li, h1{
     height: 500px;
 }
 
+/* quote */
+.deco-custom{
+    width: 30vh;
+}
+
 @media screen and (max-width: 767px) {
     .pallino::after{
        display: none;
@@ -108,5 +127,9 @@ ul li, h1{
     }
     .presto-height{
         height: 300px;
+    }
+    .ul-custom{
+        background-color: var(--white);
+        background-image: linear-gradient( #f1f6fb, #f1f6fb,#f1f6fb64, #cd222521 , #cd22254d, #cd2225ad) ;
     }
 }
