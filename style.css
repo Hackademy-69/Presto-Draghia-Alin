@@ -6,11 +6,25 @@
     --gold: rgb(224, 176, 76);
 
 }
+main{
+    background-color: var(--white);
+}
 
-ul li{
+h1, h2, h3, .h1, .h2, .h3{
+    color: var(--d_red);
+}
+
+ul li, h1{
     font-family: 'Marck Script', cursive;
 }
 
+.text-dred{
+    color: var(--d_red);
+}
+
+.text-red{
+    color: var(--red);
+}
 
 .bg-white{
     background-color: var(--white);
@@ -24,6 +38,11 @@ ul li{
 .navbar{
     height: 70px;
     transition: 0.5s;
+}
+.bg-custom{
+    background-image: linear-gradient(to Top, #F1F6FB, #f1f6fbaf, rgba(255, 255, 255, 0)) ,url(./Media/navbar-bg.png);
+    background-size: cover;
+    background-position: center;
 }
 .ul-custom{
     border-bottom: 3px solid var(--gold);
@@ -60,10 +79,34 @@ ul li{
 
 }
 
+/* header */
+.bg-header{
+    margin-top: 70px;
+    width: 80vw;
+    height: 500px;
+    background-image: linear-gradient(#f1f6fb, #f1f6fbb6, rgba(224, 177, 76, 0),#5a5a5a06, #5a5a5a06, #5a5a5a06, #f1f6fb2f, #f1f6fb9d, #f1f6fb  ) ,url(./Media/Venezia.png);
+    background-size: cover;
+    background-position: center;
+}
+.presto-custom{
+    font-size: 100px;
+    letter-spacing: 10px;
+    
+
+}
+.presto-height{
+    height: 500px;
+}
+
 @media screen and (max-width: 767px) {
     .pallino::after{
        display: none;
     }
     
-    
+    .bg-header{
+        height: 300px;
+    }
+    .presto-height{
+        height: 300px;
+    }
 }
