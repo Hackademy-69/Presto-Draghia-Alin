@@ -8,6 +8,7 @@
 }
 main{
     background-color: var(--white);
+    margin-top: 70px;
 }
 
 h1, h2, h3, .h1, .h2, .h3{
@@ -19,6 +20,9 @@ ul li, h1, p{
     font-family: 'Marck Script', cursive;
 
 }
+.altFont{
+    font-family: 'Courgette', cursive;
+}
 
 .text-dred{
     color: var(--d_red);
@@ -26,6 +30,9 @@ ul li, h1, p{
 
 .text-red{
     color: var(--red);
+}
+.text-gold{
+    color: var(--gold);
 }
 
 .bg-white{
@@ -95,7 +102,7 @@ ul li, h1, p{
 
 /* header */
 .bg-header{
-    margin-top: 70px;
+    
     width: 80vw;
     height: 500px;
     background-image: linear-gradient(#f1f6fb, #f1f6fbb6, rgba(224, 177, 76, 0),#5a5a5a06, #5a5a5a06, #5a5a5a06, #f1f6fb2f, #f1f6fb9d, #f1f6fb  ) ,url(./Media/Venezia.png);
@@ -117,6 +124,38 @@ ul li, h1, p{
     width: 30vh;
 }
 
+/* reviews */
+/* Swiper */
+
+.swiper{
+    height: 600px;
+}
+
+.card-review{
+    height: 250px;
+    width: 500px;
+    border: 2px solid var(--red);
+    border-radius: 20px;
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next{
+    width: 75px;
+   
+}
+
+.swiper-button-prev{
+    width: 75px;
+   
+}
+
+
+
 @media screen and (max-width: 767px) {
     .pallino::after{
        display: none;
@@ -132,4 +171,41 @@ ul li, h1, p{
         background-color: var(--white);
         background-image: linear-gradient( #f1f6fb, #f1f6fb,#f1f6fb64, #cd222521 , #cd22254d, #cd2225ad) ;
     }
+}
+
+
+
+/* articoli */
+
+.accordion-item, .accordion-button{
+    background-image: linear-gradient(#cd222500, #cd222500,#cd22252b, #cd222525);
+    color: var(--d_red);
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--red);
+    background-color: var(--white);
+    box-shadow: none;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.card-custom{
+
+    width: 30%;
+    border: 2px solid var(--Gray);
+    background-color: rgba(213, 233, 231, 0.995);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.img-card{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

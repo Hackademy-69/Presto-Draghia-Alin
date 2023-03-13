@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto</title>
+
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Marck+Script&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-white">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-custom fixed-top">
+        <div class="container-fluid ">
+
+            <a class="navbar-brand" href="#">
+                <img id="logoNavbar" src="./Media/logo.png" alt="Logo del sito" class="logo">
+            </a>
+
+          <img id="hidden-blade" src="./Media/Hidden_blade_closed.png" class="toggler-custom d-md-none" alt="hiddenblade" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ul-custom pallino">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./articoli.html">Annunci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+              </li>
+            </ul>
+            
+            
+            <div class="logo"></div>
+          </div>
+        </div>
+      </nav>
+
+    
+
+
+    <main >
+
+        <h1 class="display-3">I nostri prodotti</h1>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-12 col-md-3">
+                    
+                    <h3 class="display-5 altFont">Filtra per:</h3>
+                    
+                    
+                    <div class="accordion sticky-top" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button altFont" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Categoria
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="radioWrapper" class="accordion-body">
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="categories" id="All" checked>
+                                        <label class="form-check-label" for="All">
+                                            Tutte le categorie
+                                        </label>
+                                    </div>
+                                
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed altFont" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Prezzo
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <input id="priceInput" type="range" class="w-100" value="500" min="0" max="1000">
+                                    <p class="lead" id="priceValue">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed altFont" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Parola
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <input id="wordInput" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <div id="cardWrapper" class="col-12 col-md-9 d-flex justify-content-around flex-wrap">
+                </div>
+                
+            </div>
+        </div>
+
+
+      
+
+
+
+
+
+    </main>
+
+
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e68b4c7621.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="./Javascript/articoli.js"></script>
+  </body>
+</html>

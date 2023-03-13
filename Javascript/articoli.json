@@ -1,0 +1,80 @@
+[
+    {
+        "id":1,
+        "name": "Health Potion",
+        "category": "Consumables",
+        "price": "25",
+        "img": "./Item_pics/healthpotion.png"
+    },
+    {
+        "id":2,
+        "name": "Dull Sword",
+        "category": "Weapons",
+        "price": "20",
+        "img": "./Item_pics/dull-sword.png"
+    },
+    {
+        "id":3,
+        "name": "Sharp Sword",
+        "category": "Weapons",
+        "price": "50",
+        "img": "./Item_pics/sharp-sword.png"
+    },
+    {
+        "id":4,
+        "name": "Mana Potion",
+        "category": "Consumables",
+        "price": "30",
+        "img": "./Item_pics/manapotion.png"
+    },
+    {
+        "id":5,
+        "name": "Poison",
+        "category": "Consumables",
+        "price": "70",
+        "img": "./Item_pics/poison.png"
+    },
+    {
+        "id":6,
+        "name": "Bomb",
+        "category": "Utilities",
+        "price": "125",
+        "img": "./Item_pics/bomb.png"
+    },
+    {
+        "id":7,
+        "name": "Emerald",
+        "category": "Materials",
+        "price": "225",
+        "img": "./Item_pics/emerald.png"
+    },
+    {
+        "id":8,
+        "name": "Ruby",
+        "category": "Materials",
+        "price": "295",
+        "img": "./Item_pics/ruby.png"
+    },
+    {
+        "id":9,
+        "name": "Diamond",
+        "category": "Materials",
+        "price": "499",
+        "img": "./Item_pics/diamond.png"
+    },
+    {
+        "id":10,
+        "name": "Treasure Map",
+        "category": "Rare",
+        "price": "999",
+        "img": "./Item_pics/treasuremap.png"
+    },
+    {
+        "id":9,
+        "name": "Random Crafting Recipe",
+        "category": "Misc",
+        "price": "350",
+        "img": "./Item_pics/recipe.png"
+    }
+    
+]
