@@ -51,22 +51,80 @@ fetch('./Javascript/articoli.json').then((response)=> response.json()).then((dat
 
     showCards(data);
 
-    function filterByCategory(categoria){
-        if(categoria!= 'All'){
-            let filtered = data.filter((annuncio)=> annuncio.category == categoria);
-            showCards(filtered);
+    
+    let radioButtons = document.querySelectorAll('.form-check-input');
+
+    function filterByCategory(array){
+
+        let arrayFromNodeList = Array.from(radioButtons);
+        let button = arrayFromNodeList.find( (bottone)=> bottone.checked );
+        let categoria = button.id;
+
+
+
+
+        if(categoria != 'All'){
+            let filtered = array.filter((annuncio)=> annuncio.category == categoria);
+            return filtered;
         }else{
-            showCards(data);
+            return array;
         }
         
     }
     
-    let radioButtons = document.querySelectorAll('.form-check-input');
+    
 
-    radioButtons.forEach( (button)=> {
+     radioButtons.forEach( (button)=> {
         button.addEventListener('click', ()=>{
-            filterByCategory(button.id);
+            setPriceInput(filterByCategory(data));
+
+            globalFilter();
         })
     });
+
+    let priceInput = document.querySelector('#priceInput');
+    let priceValue = document.querySelector('#priceValue');
+
+    function setPriceInput(array){
+        let prices = array.map( (annuncio)=> +annuncio.price );
+        prices.sort( (a, b)=> a - b );
+        let maxPrice = Math.ceil(prices.pop());
+        priceInput.max = maxPrice;
+        priceInput.value = maxPrice;
+        priceValue.innerHTML = maxPrice;
+
+    }
+
+    setPriceInput(filterByCategory(data));
+
+    function filterByPrice(array){
+        let filtered = array.filter((annuncio)=> +annuncio.price <= priceInput.value);
+        return filtered;
+    }
+
+    priceInput.addEventListener('input', ()=>{
+        priceValue.innerHTML = priceInput.value;
+        globalFilter();
+    });
+
+    let wordInput = document.querySelector('#wordInput');
+
+    function filterByWord(array){
+        let filtered = array.filter((annuncio)=> annuncio.name.toLowerCase().includes(wordInput.value.toLowerCase()));
+        return filtered;
+    }
+
+    wordInput.addEventListener('input', ()=>{
+        globalFilter();
+    });
+
+    function globalFilter(){
+        let filteredByCategory = filterByCategory(data);
+        let filteredByPrice = filterByPrice(filteredByCategory);
+        let filteredByWord = filterByWord(filteredByPrice);
+
+        showCards(filteredByWord);
+    }
+
 
 })
